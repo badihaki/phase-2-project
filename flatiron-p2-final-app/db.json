@@ -1,4 +1,66 @@
 {
+    "characters": [
+        {
+            "ID": 1,
+            "name": "Blake",
+            "class": "Mech-Knight",
+            "description": "A knight that uses a mech suit to fight",
+            "stats":{
+                "health": 50,
+                "attack": 8,
+                "defense": 9,
+                "range": 2,
+                "speed": 3,
+                "magic": 1,
+                "tech": 3
+            }
+        },
+        {
+            "ID": 2,
+            "name": "Wendy",
+            "class": "Hawkeye",
+            "description": "Trained to be the Arhc-Lord's best sharpshooters.",
+            "stats":{
+                "health": 25,
+                "attack": 6,
+                "defense": 4,
+                "range": 9,
+                "speed": 7,
+                "magic": 3,
+                "tech": 4
+            }
+        },
+        {
+            "ID": 3,
+            "name": "Kiki",
+            "class": "Machinist",
+            "description": "Can cobble a war-machine from a box of scraps",
+            "stats":{
+                "health": 30,
+                "attack": 4,
+                "defense": 6,
+                "range": 7,
+                "speed": 7,
+                "magic": 2,
+                "tech": 8
+            }
+        },
+        {
+            "ID": 4,
+            "name": "Shawna",
+            "class": "Soul-Grappler",
+            "description": "Can both heal and punch your soul.",
+            "stats":{
+                "health": 30,
+                "attack": 4,
+                "defense": 4,
+                "range": 2,
+                "speed": 8,
+                "magic": 9,
+                "tech": 7
+            }
+        }
+    ],
     "classes": [
         {
             "ID": 1,
