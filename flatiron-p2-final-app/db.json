@@ -1,0 +1,82 @@
+{
+    "classes": [
+        {
+            "ID": 1,
+            "name": "Mech-Knight",
+            "description": "A knight that uses a mech suit to fight",
+            "startingStats":{
+                "health": 50,
+                "attack": 8,
+                "defense": 9,
+                "range": 2,
+                "speed": 3,
+                "magic": 1,
+                "tech": 3
+            }
+        },
+        {
+            "ID": 2,
+            "name": "Hawkeye",
+            "description": "Trained to be the Arhc-Lord's best sharpshooters.",
+            "startingStats":{
+                "health": 25,
+                "attack": 6,
+                "defense": 4,
+                "range": 9,
+                "speed": 7,
+                "magic": 3,
+                "tech": 4
+            }
+        },
+        {
+            "ID": 3,
+            "name": "Machinist",
+            "description": "Can cobble a war-machine from a box of scraps",
+            "startingStats":{
+                "health": 30,
+                "attack": 4,
+                "defense": 6,
+                "range": 7,
+                "speed": 7,
+                "magic": 2,
+                "tech": 8
+            }
+        },
+        {
+            "ID": 4,
+            "name": "Soul-Grappler",
+            "description": "Can both heal and punch your soul.",
+            "startingStats":{
+                "health": 30,
+                "attack": 4,
+                "defense": 4,
+                "range": 2,
+                "speed": 8,
+                "magic": 9,
+                "tech": 7
+            }
+        }
+    ],
+    "skills": [
+        {
+            "ID": 1,
+            "name": "Vehicle Mastery"
+        },
+        {
+            "ID": 2,
+            "name": "Rifle Mastery"
+        },
+        {
+            "ID": 3,
+            "name": "Blade Mastery"
+        },
+        {
+            "ID": 4,
+            "name": "Gift of Gab"
+        },
+        {
+            "ID": 5,
+            "name": "Survivor"
+        }
+    ]
+}
