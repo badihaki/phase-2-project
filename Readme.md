@@ -25,14 +25,16 @@
    ## Design
 
    # Purpose
-   This app will be used to track characters for a table-top role playing game. During game sessions, players
-   often find it hard to track their character's data. I want to create an app to display all members of
-   the playing party, as well as vital game-time information.
+   This app will be used to create and track Fighting Game tournaments.
+   The app will consist of 5 main components representing different web pages:
+   home, competitors, tournaments, register new competitor, and create new tournament.
 
-   # Components
+   # Component Heirarchy
    - App
-    - Party Menu
-        - Player Characters
-            - Character Details
-            - Inventory
-    - New Character Form
+    - Home
+    - Tournaments
+    - CompetitorsList
+        - Challenger
+        - Challenger Info
+    - NewChallenger
+    - NewTourney
