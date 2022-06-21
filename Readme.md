@@ -31,8 +31,10 @@
 
    # Component Heirarchy
    - App
+    - Navbar
     - Home
-    - Tournaments
+    - TournamentList
+        - TourneyTicket
     - CompetitorsList
         - Challenger
         - Challenger Info
