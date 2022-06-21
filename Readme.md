@@ -35,7 +35,7 @@
     - Home
     - TournamentList
         - TourneyTicket
-    - CompetitorsList
+    - PlayerList
         - Challenger
         - Challenger Info
     - NewChallenger
