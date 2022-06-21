@@ -40,3 +40,7 @@
         - Challenger Info
     - NewChallenger
     - NewTourney
+
+    ## Component Details
+    # App
+    Main component for 

@@ -10,7 +10,12 @@
         {
             "ID": 1,
             "name": "South Side Brawl",
-            "challengerIDs": [1]
+            "organizer": "Haki",
+            "email": "xxx@xxx.com",
+            "date": "2022-07-17",
+            "challengerIDs": [1],
+            "game": "Street Fighter",
+            "pot": 250
         }
     ]
 }
