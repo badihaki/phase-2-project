@@ -48,4 +48,22 @@ json-server --watch db.json
 
     ## Component Details
     # App
-    Main component for 
+    Main component for the app, will fetch tournament and player data on load
+
+      # Navbar
+      Navigation. Nuff said
+      
+      # Home
+      Landing page for the app.
+
+      # TournamentList
+      Maps out tournament data into TourneyTicket components and renders them to a page
+
+         # TourneyTicket
+         Determines how to render individual tournaments
+      
+      # PlayerList
+      Maps out player data into Challenger components, and renders them to a page
+
+         # Challenger
+         Determines how to render individual challenger data

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import '../App.css';
 import { Route, Switch } from "react-router-dom";
 import NavBar from './NavigationBar';
@@ -9,6 +9,21 @@ import NewChallengerForm from './NewChallengerForm';
 import NewTournamentForm from './NewTourneyForm';
 
 function App() {
+
+  const [players, setPlayers] = useState([]);
+  const [tournaments, setTournaments] = useState([]);
+
+  useEffect( ()=> {
+    fetch(`${api}/players`).then( r=>r.json()).then((data)=>{
+      setPlayers(data);
+    })
+  }, [])
+
+  useEffect( ()=> {
+    fetch(`${api}/tournaments`).then(r=>r.json()).then( (data)=>{
+      setTournaments(data);
+    })
+  }, [])
 
   const api = "http://localhost:3000";
   
@@ -49,10 +64,10 @@ function App() {
           <NewChallengerForm newChallenger={postNewChallenger} />
         </Route>
       <Route exact path={"/challengers"}>
-          <PlayersList />
+          <PlayersList players={players} />
         </Route>
       <Route exact path={"/tournaments"}>
-          <TourneyList />
+          <TourneyList tournaments={tournaments} />
         </Route>
         <Route exact path={"/"}>
           <Home />
