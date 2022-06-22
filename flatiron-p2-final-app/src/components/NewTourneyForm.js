@@ -46,7 +46,7 @@ function NewTournamentForm({ newTournament }){
                     <label htmlFor="date">
                     Date of Tournament
                     </label>
-                    <input type={"date"} name="date" min={"2022-07-01"} max={"2157-12-12"} defaultValue={form.date} onChange={handleChangeForm} required />
+                    <input type={"date"} name="date" id="date" min={"2022-07-01"} max={"2157-12-12"} defaultValue={form.date} onChange={handleChangeForm} required />
                 </div>
                 <div>
                     <input type="radio" name="game" value={"Street Fighter"} onChange={handleChangeForm} />Street Fighter

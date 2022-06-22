@@ -22,6 +22,19 @@ function App() {
       body: JSON.stringify(tournament)
     }).then( (r) => r.json() ).then( (data)=> {
       console.log(data);
+      // set tournaments here
+    })
+  }
+  function postNewChallenger(player){
+    fetch(`${api}/players`,{
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(player)
+    }).then( (r) => r.json()).then( (data) => {
+      console.log(data);
+      // set players here
     })
   }
 
@@ -33,7 +46,7 @@ function App() {
           <NewTournamentForm newTournament={postNewTournament} />
         </Route>
       <Route exact path={"/newchallenger"}>
-          <NewChallengerForm />
+          <NewChallengerForm newChallenger={postNewChallenger} />
         </Route>
       <Route exact path={"/challengers"}>
           <PlayersList />

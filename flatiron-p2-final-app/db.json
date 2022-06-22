@@ -3,12 +3,31 @@
     {
       "id": 1,
       "name": "Haki",
+      "age": "33",
       "games": [
         "Guilty Gear",
         "Street Fighter",
         "Tekken",
         "Smash Ultimate"
       ]
+    },
+    {
+      "name": "waffle mix",
+      "age": "20",
+      "games": [
+        "Guilty Gear",
+        "Street Fighter"
+      ],
+      "id": 2
+    },
+    {
+      "name": "egg",
+      "age": "19",
+      "games": [
+        "Tekken",
+        "Smash Ultimate"
+      ],
+      "id": 3
     }
   ],
   "tournaments": [
