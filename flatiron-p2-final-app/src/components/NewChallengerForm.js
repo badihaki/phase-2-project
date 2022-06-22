@@ -5,17 +5,58 @@ function NewChallengerForm({ newChallenger }){
     const [challenger, setNewChallenger] = useState({
       "name": "",
       "age": "",
-      "games": []
+      "games": [{
+        "title": "Guilty Gear",
+        "selected": false
+      },
+      {
+        "title": "Street Fighter",
+        "selected": false
+      },
+      {
+        "title": "Tekken",
+        "selected": false
+      },
+      {
+        "title": "Smash Ultimate",
+        "selected": false
+      }]
     })
 
+    const checkboxes = challenger.games.map( (game) => {
+        return(
+            <div key={game.title}>
+                <label htmlFor={game.title}>{game.title}</label>
+                <input type={"checkbox"} name={game.title} id={game.title}  checked={game.selected} onChange={handleGamesCheckbox} />
+            </div>
+        )
+    })
+    
     function handleSubmit(event){
         event.preventDefault();
         newChallenger(challenger);
-        event.target.reset();
-        debugger;
-        window.location.reload(true);
+        setNewChallenger({
+            "name": "",
+            "age": "",
+            "games": [{
+                "title": "Guilty Gear",
+                "selected": false
+              },
+              {
+                "title": "Street Fighter",
+                "selected": false
+              },
+              {
+                "title": "Tekken",
+                "selected": false
+              },
+              {
+                "title": "Smash Ultimate",
+                "selected": false
+              }]
+        })
     }
-
+    
     function handleChangeForm(event){
         const key = event.target.name;
         const value = event.target.value;
@@ -23,29 +64,16 @@ function NewChallengerForm({ newChallenger }){
         newPlayer[key] = value;
         setNewChallenger(newPlayer);
     }
-
-    function handleAddRemoveGames(event){
-        if(event.target.checked){
-            addGame(event.target.name);
+    
+        function handleGamesCheckbox(event){
+            const gameTitle = event.target.name;
+            const overwritingPlayer = {...challenger}
+            const gameToOverwrite = overwritingPlayer.games.find( (game)=> {
+                return game.title === gameTitle;
+            })
+            gameToOverwrite.selected=!gameToOverwrite.selected;
+            setNewChallenger(overwritingPlayer);
         }
-        else if(!event.target.checked){
-            removeGame(event.target.name);
-        }
-    }
-    function addGame(game){
-        const temporaryPlayerObject = {...challenger};
-        temporaryPlayerObject.games.push(game);
-        setNewChallenger(temporaryPlayerObject);
-        debugger
-    }
-    function removeGame(gameName){
-        const games = challenger.games.filter( (game)=>{
-            return gameName !== game;
-        })
-        const temporaryPlayerObject = {...challenger, games};
-        setNewChallenger(temporaryPlayerObject);
-        // debugger
-    }
 
     return(
         <form onSubmit={handleSubmit}>
@@ -66,17 +94,7 @@ function NewChallengerForm({ newChallenger }){
                     Games
                 </label>
                 <div>
-                    <label htmlFor="Street Fighter">Guilty Gear</label>
-                    <input type={"checkbox"} name={"Guilty Gear"} id={"Guilty Gear"} onChange={handleAddRemoveGames} />
-                    <br />
-                    <label htmlFor="Street Fighter">Street Fighter</label>
-                    <input type={"checkbox"} name={"Street Fighter"} id={"Street Fighter"}  onChange={handleAddRemoveGames} />
-                    <br />
-                    <label htmlFor="Tekken">Tekken</label>
-                    <input type={"checkbox"} name={"Tekken"} id={"Tekken"}  onChange={handleAddRemoveGames} />
-                    <br />
-                    <label htmlFor="Smash Ultimate">Smash Ultimate</label>
-                    <input type={"checkbox"} name={"Smash Ultimate"} id={"Smash Ultimate"}  onChange={handleAddRemoveGames} />
+                    {checkboxes}
                 </div>
                 <div>
                     <button type="submit">Submit</button>

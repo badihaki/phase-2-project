@@ -1,6 +1,7 @@
 import React from "react";
+import Challenger from "./Challenger";
 
-function PlayersList(){
+function PlayersList({ players }){
     return(
         <div>
             Players
