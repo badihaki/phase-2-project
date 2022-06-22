@@ -9,13 +9,28 @@ import NewChallengerForm from './NewChallengerForm';
 import NewTournamentForm from './NewTourneyForm';
 
 function App() {
+
+  const api = "http://localhost:3000";
+  
+  function postNewTournament(tournament){
+    // console.log(tournament)
+    fetch(`${api}/tournaments`,{
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(tournament)
+    }).then( (r) => r.json() ).then( (data)=> {
+      console.log(data);
+    })
+  }
+
   return (
     <div className="App">
-      {/* nav bar and nav links to all resources */}
       <NavBar />
       <Switch>
       <Route exact path={"/newtourney"}>
-          <NewTournamentForm />
+          <NewTournamentForm newTournament={postNewTournament} />
         </Route>
       <Route exact path={"/newchallenger"}>
           <NewChallengerForm />

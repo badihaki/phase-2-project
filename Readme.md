@@ -1,5 +1,10 @@
 # Phase 2 Flatiron Final Project
 
+## Stuff I need to know
+Then, assuming you have json-server installed globally, you can run this command to run the server:
+
+json-server --watch db.json
+
 ## Requirements
 
 1. You must make a single page application (only one `index.html` file) using
