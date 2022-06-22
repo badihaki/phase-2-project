@@ -1,21 +1,38 @@
 {
-    "players": [
-        {
-            "ID": 1,
-            "name": "Haki",
-            "games": ["Guilty Gear","Street Fighter","Tekken", "Smash Ultimate"]
-        }
-    ],
-    "tournaments": [
-        {
-            "ID": 1,
-            "name": "South Side Brawl",
-            "organizer": "Haki",
-            "email": "xxx@xxx.com",
-            "date": "2022-07-17",
-            "challengerIDs": [1],
-            "game": "Street Fighter",
-            "pot": 250
-        }
-    ]
+  "players": [
+    {
+      "id": 1,
+      "name": "Haki",
+      "games": [
+        "Guilty Gear",
+        "Street Fighter",
+        "Tekken",
+        "Smash Ultimate"
+      ]
+    }
+  ],
+  "tournaments": [
+    {
+      "id": 1,
+      "name": "South Side Brawl",
+      "organizer": "Haki",
+      "email": "xxx@xxx.com",
+      "date": "2022-07-17",
+      "challengerIDs": [
+        "1"
+      ],
+      "game": "Street Fighter",
+      "pot": "250"
+    },
+    {
+      "name": "egg",
+      "organizer": "231 Beep",
+      "email": "jaco@222.com",
+      "date": "2022-07-11",
+      "challengerIDs": [],
+      "game": "Guilty Gear",
+      "pot": "5",
+      "id": 2
+    }
+  ]
 }
