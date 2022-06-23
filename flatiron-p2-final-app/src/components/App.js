@@ -36,7 +36,8 @@ function App() {
       },
       body: JSON.stringify(tournament)
     }).then( (r) => r.json() ).then( (data)=> {
-      console.log(data);
+      const newTourneyList = [...tournaments, data];
+      setTournaments(newTourneyList);
       // set tournaments here
     })
   }
@@ -48,7 +49,8 @@ function App() {
       },
       body: JSON.stringify(player)
     }).then( (r) => r.json()).then( (data) => {
-      console.log(data);
+      const newPlayersList = [...players, data];
+      setPlayers(newPlayersList);
       // set players here
     })
   }

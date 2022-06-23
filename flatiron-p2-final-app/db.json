@@ -45,6 +45,75 @@
         }
       ],
       "id": 2
+    },
+    {
+      "name": "KD",
+      "age": "28",
+      "games": [
+        {
+          "title": "Guilty Gear",
+          "selected": false
+        },
+        {
+          "title": "Street Fighter",
+          "selected": false
+        },
+        {
+          "title": "Tekken",
+          "selected": false
+        },
+        {
+          "title": "Smash Ultimate",
+          "selected": true
+        }
+      ],
+      "id": 3
+    },
+    {
+      "name": "Quay",
+      "age": "33",
+      "games": [
+        {
+          "title": "Guilty Gear",
+          "selected": false
+        },
+        {
+          "title": "Street Fighter",
+          "selected": true
+        },
+        {
+          "title": "Tekken",
+          "selected": false
+        },
+        {
+          "title": "Smash Ultimate",
+          "selected": true
+        }
+      ],
+      "id": 4
+    },
+    {
+      "name": "Cutthroat Kayla",
+      "age": "33",
+      "games": [
+        {
+          "title": "Guilty Gear",
+          "selected": false
+        },
+        {
+          "title": "Street Fighter",
+          "selected": false
+        },
+        {
+          "title": "Tekken",
+          "selected": true
+        },
+        {
+          "title": "Smash Ultimate",
+          "selected": false
+        }
+      ],
+      "id": 5
     }
   ],
   "tournaments": [
