@@ -5,11 +5,14 @@ function PlayersList({ players }){
     // map through the 'players' data to create 'Challenger' conponents for each player
     const challengerCards = players.map( (player) =>{
         return (
-            <Challenger key={player.id} player={player} />
+            <div key={player.id} >
+                <Challenger player={player} />
+                <br />
+            </div>
         )
     })
     return(
-        <div>
+        <div className="playerList">
             Players
             {challengerCards}
         </div>

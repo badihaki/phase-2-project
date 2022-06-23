@@ -13,7 +13,7 @@ function Challenger({ player }){
     })
     
     return(
-        <div>
+        <div className="challenger">
             {player.name}
             <div>
                 Age: {player.age}
