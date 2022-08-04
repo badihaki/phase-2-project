@@ -1,69 +1,55 @@
-# Phase 2 Flatiron Final Project
+# Phase 2 Project - Fighting Game Tournament Tracker
 
-## Stuff I need to know
-Then, assuming you have json-server installed globally, you can run this command to run the server:
+# Pitch
+   ## Project Story
+   I've been in love with fighting games since playing Capcom's X-Men at my local laundromat, I've always tried to bring the many disparate groups
+   of gamers together for fun and shenanigans, but I always find it hard to organize a tournament or even find out when my locals are happening,
+   especially in the era of COVID. I wanted to create something that could make that whole process a little easier
+   
+   ## Core Features
+   Users will have access to two main features: Adding a new tournament or adding a new player. The underlying mechanics will be similar, using 
+   a form and a simple backend to input and store data of each tournament and player, and the app will be able to use this database to show a list
+   of both. This will be a Single Page Application, utilizing a router and switch hooks to change the data displayed on to the user.
 
-json-server --watch db.json
 
-## Requirements
+# Component Heirarchy
+- App
+ - Navbar
+ - Home
+ - TournamentList
+     - TourneyTicket
+ - PlayerList
+     - Challenger
+     - Challenger Info
+ - NewChallenger
+ - NewTourney
 
-1. You must make a single page application (only one `index.html` file) using
-   `create-react-app`.
-2. Your app should use at least 5 components in a way that keeps your code well
-   organized.
-3. There should be at least 3 client-side routes using [React
-   Router][react-router]. Be sure to include a nav bar or other UI element that
-   allows users to navigate between routes.
-4. Use a `json-server` to create a RESTful API for your backend and make both a
-   `GET` and a `POST` request to the json server. Use a form to make your post
-   request, specifically a controlled form/component. Additionally, you may
-   choose to incorporate data from an external API but it is not required.
-   - You should keep your `json-server` data simple: avoid nested data and
-     associations. You'll learn how to work with more complex data in the next
-     two phases. Focus on the frontend for this project.
-5. Add some styling: you're encouraged to write your CSS from scratch, either by
-   using [styled components][] or writing CSS files and using id/className to
-   style your elements. You can also incorporate a UI framework (like [React
-   Bootstrap][react-bootstrap], [Semantic UI][semantic-ui], or [Material
-   UI][material-ui]) if you prefer.
-
-   ## Design
-
-   # Purpose
-   This app will be used to create and track Fighting Game tournaments.
-   The app will consist of 5 main components representing different web pages:
-   home, competitors, tournaments, register new competitor, and create new tournament.
-
-   # Component Heirarchy
-   - App
-    - Navbar
-    - Home
-    - TournamentList
-        - TourneyTicket
-    - PlayerList
-        - Challenger
-        - Challenger Info
-    - NewChallenger
-    - NewTourney
-
-    ## Component Details
-    # App
+ # Component Details
+    ## App
     Main component for the app, will fetch tournament and player data on load
 
-      # Navbar
+      ## Navbar
       Navigation. Nuff said
-      
-      # Home
+
+      ## Home
       Landing page for the app.
 
-      # TournamentList
+      ## TournamentList
       Maps out tournament data into TourneyTicket components and renders them to a page
 
-         # TourneyTicket
+         ## TourneyTicket
          Determines how to render individual tournaments
-      
-      # PlayerList
+
+      ## PlayerList
       Maps out player data into Challenger components, and renders them to a page
 
-         # Challenger
+         ## Challenger
          Determines how to render individual challenger data
+         
+# How I'm meeting the requirements of this project
+   ## Scale
+   I'm scaling this app small. It is only meant to store and display data.
+   ## Scheduling
+   - MVP within 3 days
+   - 1 day of styling
+   - 2 days of bugfixing
